@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Quiz Application</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="quiz.css">
+</head>
+
+<body class="bg-gradient-to-br from-purple-500 to-indigo-600 min-h-screen font-['Poppins']">
+    <div class="container mx-auto px-4 py-12 max-w-3xl">
+        <div class="bg-white rounded-3xl shadow-2xl p-8">
+            <h1 class="text-4xl font-bold mb-8 text-center text-indigo-700">Quiz Master</h1>
+
+            <select id="difficulty"
+                class="mb-6 p-3 w-full border-2 border-indigo-200 rounded-lg focus:outline-none focus:border-indigo-500 transition-colors">
+                <option value="easy">Easy</option>
+                <option value="medium" selected>Medium</option>
+                <option value="hard">Hard</option>
+            </select>
+
+            <div id="quiz-container" class="space-y-8">
+                <div class="question-container">
+                    <!-- Questions will be rendered here -->
+                </div>
+            </div>
+
+            <div id="navigation-buttons" class="flex justify-between mt-8">
+                <button id="prev-btn"
+                    class="bg-indigo-500 text-white px-6 py-3 rounded-lg disabled:bg-indigo-300 disabled:cursor-not-allowed transition duration-300 ease-in-out transform hover:scale-105 hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50 opacity-50">Previous</button>
+                <button id="next-btn"
+                    class="bg-indigo-500 text-white px-6 py-3 rounded-lg disabled:bg-indigo-300 disabled:cursor-not-allowed transition duration-300 ease-in-out transform hover:scale-105 hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50 opacity-50">Next</button>
+            </div>
+
+            <div id="progress-bar" class="w-full bg-gray-200 rounded-full h-3 mb-6 mt-8">
+                <div id="progress"
+                    class="bg-gradient-to-r from-green-400 to-blue-500 h-3 rounded-full transition-all duration-500 ease-in-out"
+                    style="width: 0%"></div>
+            </div>
+
+            <button id="submit-btn"
+                class="w-full bg-gradient-to-r from-green-400 to-blue-500 text-white px-8 py-4 rounded-lg mt-6 font-semibold text-lg transition duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50">Submit
+                Quiz</button>
+            <div id="result" class="mt-6 text-2xl font-bold text-center text-indigo-700"></div>
+            <button id="restart-btn"
+                class="hidden w-full bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-8 py-4 rounded-lg mt-6 font-semibold text-lg transition duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-opacity-50">Restart
+                Quiz</button>
+        </div>
+    </div>
+
+    <script src="quiz.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,20 @@
+.question-container {
+    position: relative;
+    overflow: hidden;
+    transition: height 0.5s ease-in-out;
+}
+
+.question {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.question.active {
+    opacity: 1;
+    transform: translateY(0);
+}
