@@ -34,30 +34,30 @@ function generateRandomQuestion(difficulty) {
 
   if (operator === "++" || operator === "--") {
     question = `What is the result of: let x = ${value1}; x${operator};`;
-    let x = Number(value1);
+    let x = value1;
     correctAnswer = operator === "++" ? x++ : x--;
   } else if (operator.endsWith("=")) {
     question = `What is the value of x after: let x = ${value1}; x ${operator} ${value2};`;
-    let x = Number(value1);
+    let x = value1;
     switch (operator) {
       case "+=":
-        x += Number(value2);
+        x += value2;
         break;
       case "-=":
-        x -= Number(value2);
+        x -= value2;
         break;
       case "*=":
-        x *= Number(value2);
+        x *= value2;
         break;
       case "/=":
-        x /= Number(value2);
+        x /= value2;
         break;
     }
     correctAnswer = x;
   } else {
     question = `What is the result of ${value1} ${operator} ${value2}?`;
-    let x = Number(value1);
-    let y = Number(value2);
+    let x = value1;
+    let y = value2;
     switch (operator) {
       case "+":
         correctAnswer = x + y;
@@ -88,7 +88,7 @@ function generateRandomValue(dataType) {
       // Generate a random number between 0 and 9
       return Math.floor(Math.random() * 10);
     case "string":
-      return `"${Math.random().toString(36).substring(7)}"`;
+      return `${Math.random().toString(36).substring(7)}`;
     case "boolean":
       return Math.random() < 0.5;
     case "null":
