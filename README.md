@@ -2,6 +2,9 @@
 
 An interactive quiz application that tests users' knowledge of JavaScript operators and data types.
 
+![quiz](https://github.com/user-attachments/assets/0f77baca-1846-4291-904d-981b486cd366)
+
+
 ## Features
 
 - Dynamically generated questions based on difficulty level
